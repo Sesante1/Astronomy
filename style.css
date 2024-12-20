@@ -8,6 +8,27 @@
     outline: none !important;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(199, 196, 196); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(199, 196, 196); 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", system-ui;
     background-color: #000;
@@ -27,7 +48,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    text-align: center;
+    /* text-align: center; */
     border-image: fill 0 linear-gradient(#0003, #000);
 }
 

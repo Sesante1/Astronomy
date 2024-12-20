@@ -15,7 +15,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');  
         } else {
-            entry.target.classList.remove('show');  
+            entry.target.classList.remove('show'); 
         }
     });
 });
@@ -50,3 +50,39 @@ prev.addEventListener('click', function() {
     let slides = document.querySelectorAll('.slides');
     slider.prepend(slides[slides.length - 1]);
 })
+
+//scroll to elements
+
+function scrollToElement(elementSelector, instance = 0) {
+    const elements = document.querySelectorAll(elementSelector);
+
+    if (elements.length > instance){
+        elements[instance].scrollIntoView({ behavior: 'smooth'});
+    }
+}
+
+const link1 = document.getElementById("intro");
+const link2 = document.getElementById("history");
+const link3 = document.getElementById("news");
+const link4 = document.getElementById("solar");
+const link5 = document.getElementById("tech");
+
+link1.addEventListener('click', () => {
+    scrollToElement('.container2');
+});
+
+link2.addEventListener('click', () => {
+    scrollToElement('.container3');
+});
+
+link3.addEventListener('click', () => {
+    scrollToElement('.container-4');
+});
+
+link4.addEventListener('click', () => {
+    scrollToElement('.container-5');
+});
+
+link5.addEventListener('click', () => {
+    scrollToElement('.container-6');
+});
